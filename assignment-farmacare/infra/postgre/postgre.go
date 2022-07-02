@@ -3,6 +3,7 @@ package infra
 import (
 	"errors"
 	"fmt"
+	"io/ioutil"
 	"os"
 
 	"github.com/jmoiron/sqlx"
@@ -59,14 +60,14 @@ func InitPostgre() error {
 	}
 
 	// table migration
-	// query, err := ioutil.ReadFile("./migrations/migration.sql")
-	// if err != nil {
-	// 	return err
-	// }
+	query, err := ioutil.ReadFile("./migrations/migration.sql")
+	if err != nil {
+		return err
+	}
 
-	// if _, err := PSQL.DB.Exec(string(query)); err != nil {
-	// 	panic(err)
-	// }
+	if _, err := PSQL.DB.Exec(string(query)); err != nil {
+		panic(err)
+	}
 
 	return nil
 }

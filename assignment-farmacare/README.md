@@ -1,12 +1,15 @@
 # Code Assignment farmacare
 
 ## Run/Test Project
+- run `go mod tidy` for download all dependencies
+- running the apps using `go run .` or `go run main.go`
 
-## env sample
+## env example
+add .env file containing :
+   - APP_PORT= (app port)
+   - POSTGRES_ADDRESS= (postgres address)
+   - POSTGRES_DB= (postgres db)
+   - POSTGRES_PASSWORD= (postgres password)
+   - POSTGRES_USER= (postgres user)
+   - POSTGRES_PORT= (postgres port)
 
-- APP_PORT=8080
-- POSTGRES_ADDRESS=localhost
-- POSTGRES_DB=local
-- POSTGRES_PASSWORD=myPassword
-- POSTGRES_USER=postgres
-- POSTGRES_PORT=5432
